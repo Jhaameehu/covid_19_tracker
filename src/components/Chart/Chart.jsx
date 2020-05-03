@@ -12,7 +12,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData ());
         }
-        console.log(dailyData);
+        
 
         fetchAPI();
     }, []);
@@ -51,7 +51,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
                                 'rgba(0, 255, 0, 0.555)',
                                 'rgba(255, 0, 0, 0.5)',
                             ],
-                            data:[confirmed, recovered, deaths]
+                            data:[confirmed.value, recovered.value, deaths.value]
                         }]
                     }}
                     options={{
